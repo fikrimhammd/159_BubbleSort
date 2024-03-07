@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int a{ 20 };        // Deklarasi array adengan ukuran 20
+int a [20];        // Deklarasi array adengan ukuran 20
 int n;              // Deklarasi variabel n untuk menyimpan banyaknya elemen pada array
 
 
@@ -40,7 +40,7 @@ void display() {             // Prosedur untuk menampilkan hasil
 	cout << endl;                                // Output baris kosong
 }
 
-void bubbleShortArray() {                        // Prosedur untuk mengurutkan array dengan metode bubble short
+void bubbleSortArray() {                        // Prosedur untuk mengurutkan array dengan metode bubble short
 	int pass = 1;                                // step 1
 
 	for (pass; pass <= n - 1; pass++) {             // Looping dengan i dimulai dari 1 hingga n-1
@@ -49,6 +49,20 @@ void bubbleShortArray() {                        // Prosedur untuk mengurutkan a
 				int temp = a[j];                    // Simpan nilai a[j] ke variabel sementara temp
 				a[j] = a[j + 1];                    // Assign nilai a[j + 1] ke a[j]
 				a[j + 1] = temp;                    // Assign nilai temp ke a[j + 1]
+			}
+		}
+	}
+}
+
+int main()
+{
+	input();                    // Memanggil read()
+	bubbleSortArray();       // Memanggil  bubbleSortArray()
+    display();                 //Memanggil display()
+	return 0;
+}
+	
+
 
 	
 	
